@@ -48,6 +48,7 @@ const createShape = {
         action: "clickPolygonPointsKonva",
         params: [points],
         result: {
+          closed: true,
           points,
         },
       };
@@ -63,6 +64,7 @@ const createShape = {
           ],
         ],
         result: {
+          closed: true,
           points: [
             [x, y],
             [x + DEFAULT_DIMENSIONS.polygon.length, y],
@@ -132,7 +134,7 @@ const createShape = {
         ...opts,
         action: "dragKonva",
         params: [x, y, radius, radius],
-        result: { radiusX: radius, radiusY: radius, rotation: 0, x, y },
+        result: {radiusX: radius, radiusY: radius, rotation: 0, x, y },
       };
     },
     byTwoClicks(x, y, radius, opts = {}) {
@@ -214,6 +216,6 @@ Scenario("Creating regions by various gestures", async ({ I, AtImageView, AtSide
   const result = await I.executeScript(serialize);
 
   for (let i = 0; i < regions.length; i++) {
-    assert.deepEqual(convertToFixed(result[i].value), convertToImageSize(regions[i].result));
+    assert.deepEqual(convertToFixed(result[i].value), convertToImageSize(regions[i].result), `Region ${i + 1} is incorrect, ${JSON.stringify(result[i].value)} !== ${JSON.stringify(convertToImageSize(regions[i].result))}`);
   }
 });
