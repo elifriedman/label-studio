@@ -190,7 +190,7 @@ DJANGO_DB=default DJANGO_SETTINGS_MODULE=core.settings.label_studio pytest -vv
  
 ## What you get from Label Studio
 
-![Screenshot of Label Studio data manager grid view with images](https://raw.githubusercontent.com/heartexlabs/label-studio/master/images/labelstudio-ui.gif)
+
 
 - **Multi-user labeling** sign up and login, when you create an annotation it's tied to your account.
 - **Multiple projects** to work on all your datasets in one instance.
@@ -205,7 +205,7 @@ DJANGO_DB=default DJANGO_SETTINGS_MODULE=core.settings.label_studio pytest -vv
 
 Label Studio includes a variety of templates to help you label your data, or you can create your own using specifically designed configuration language. The most common templates and use cases for labeling include the following cases:
 
-<img src="https://raw.githubusercontent.com/heartexlabs/label-studio/master/images/template-types.png" />
+<img src="https://raw.githubusercontent.com/HumanSignal/label-studio/master/images/template-types.png" />
 
 ## Set up machine learning models with Label Studio
 
