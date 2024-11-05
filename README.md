@@ -190,7 +190,7 @@ DJANGO_DB=default DJANGO_SETTINGS_MODULE=core.settings.label_studio pytest -vv
  
 ## What you get from Label Studio
 
-<video src="https://raw.githubusercontent.com/HumanSignal/label-studio/master/images/ls-overview.mp4" width="300" />
+<video src="../images/ls-overview.mp4" width="300" />
 
 - **Multi-user labeling** sign up and login, when you create an annotation it's tied to your account.
 - **Multiple projects** to work on all your datasets in one instance.
