@@ -19,8 +19,6 @@ Label Studio is an open source data labeling tool. It lets you label data types 
 
 ![Gif of Label Studio annotating different types of data](/images/annotation_examples.gif)
 
-![Gif of Label Studio annotating different types of data2](../images/annotation_examples.gif)
-
 Have a custom dataset? You can customize Label Studio to fit your needs. Read an [introductory blog post](https://towardsdatascience.com/introducing-label-studio-a-swiss-army-knife-of-data-labeling-140c1be92881) to learn more. 
 
 ## Try out Label Studio
@@ -207,7 +205,7 @@ https://github.com/user-attachments/assets/525ad5ff-6904-4398-b507-7e8954268d69
 
 Label Studio includes a variety of templates to help you label your data, or you can create your own using specifically designed configuration language. The most common templates and use cases for labeling include the following cases:
 
-<img src="https://raw.githubusercontent.com/HumanSignal/label-studio/master/images/template-types.png" />
+<img src="/images/template-types.png" />
 
 ## Set up machine learning models with Label Studio
 
