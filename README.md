@@ -205,7 +205,7 @@ DJANGO_DB=default DJANGO_SETTINGS_MODULE=core.settings.label_studio pytest -vv
 
 Label Studio includes a variety of templates to help you label your data, or you can create your own using specifically designed configuration language. The most common templates and use cases for labeling include the following cases:
 
-<img src="https://raw.githubusercontent.com/heartexlabs/label-studio/master/images/templates-categories.jpg" />
+<img src="https://raw.githubusercontent.com/heartexlabs/label-studio/master/images/template-types.png" />
 
 ## Set up machine learning models with Label Studio
 
