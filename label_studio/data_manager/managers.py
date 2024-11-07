@@ -601,7 +601,7 @@ def annotate_annotations_results(queryset):
             )
         )
     else:
-        return queryset.annotate(annotations_results=ArrayAgg('annotations__result', distinct=True))
+        return queryset.annotate(annotations_results=ArrayAgg('annotations__result', distinct=True, default=Value([])))
 
 
 def annotate_predictions_results(queryset):
@@ -612,7 +612,7 @@ def annotate_predictions_results(queryset):
             )
         )
     else:
-        return queryset.annotate(predictions_results=ArrayAgg('predictions__result', distinct=True))
+        return queryset.annotate(predictions_results=ArrayAgg('predictions__result', distinct=True, default=Value([])))
 
 
 def annotate_annotators(queryset):
@@ -621,7 +621,7 @@ def annotate_annotators(queryset):
             annotators=Coalesce(GroupConcat('annotations__completed_by'), Value(''), output_field=models.CharField())
         )
     else:
-        return queryset.annotate(annotators=ArrayAgg('annotations__completed_by', distinct=True))
+        return queryset.annotate(annotators=ArrayAgg('annotations__completed_by', distinct=True, default=Value([])))
 
 
 def annotate_predictions_score(queryset):
@@ -655,7 +655,7 @@ def annotate_annotations_ids(queryset):
     if settings.DJANGO_DB == settings.DJANGO_DB_SQLITE:
         return queryset.annotate(annotations_ids=GroupConcat('annotations__id', output_field=models.CharField()))
     else:
-        return queryset.annotate(annotations_ids=ArrayAgg('annotations__id'))
+        return queryset.annotate(annotations_ids=ArrayAgg('annotations__id', default=Value([])))
 
 
 def annotate_predictions_model_versions(queryset):
@@ -664,7 +664,7 @@ def annotate_predictions_model_versions(queryset):
             predictions_model_versions=GroupConcat('predictions__model_version', output_field=models.CharField())
         )
     else:
-        return queryset.annotate(predictions_model_versions=ArrayAgg('predictions__model_version'))
+        return queryset.annotate(predictions_model_versions=ArrayAgg('predictions__model_version', default=Value([])))
 
 
 def annotate_avg_lead_time(queryset):
