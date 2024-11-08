@@ -293,36 +293,6 @@ curl -X GET 'https://your-label-studio-domain.com/api/projects/{project_id}/expo
   -o 'exported_annotations.json'
 ```
 
-#### Using the export snapshots API with serialization options
-
-You can include `interpolate_key_frames` in the `serialization_options` when creating an export snapshot.
-
-**API Endpoint:**
-```
-POST /api/projects/{project_id}/exports
-```
-**Request Body:**
-```json
-{
-  "title": "Export with Interpolated Keyframes",
-  "serialization_options": {
-    "interpolate_key_frames": true
-  }
-}
-```
-**Example cURL Command:**
-```bash
-curl -X POST 'https://your-label-studio-domain.com/api/projects/{project_id}/exports' \
-  -H 'Authorization: Token YOUR_API_KEY' \
-  -H 'Content-Type: application/json' \
-  --data-raw '{
-    "title": "Export with Interpolated Keyframes",
-    "serialization_options": {
-      "interpolate_key_frames": true
-    }
-  }'
-```
-
 ## Label Studio UI enhancements
 
 The video player functionality includes the following UI enhancements:
