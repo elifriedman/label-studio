@@ -97,7 +97,7 @@ For the example above, the following [importing JSON format](/guide/tasks.html#B
 
 ```json
 {
-  "video": "/static/samples/opossum_snow.mp4"
+  "video": "https://htx-pub.s3.amazonaws.com/samples/opossum_snow.mp4"
 }
 ```
 
