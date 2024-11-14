@@ -1,6 +1,6 @@
 {
-  "message": "refactor: OPTIC-1270: Remove Stale Feature Flag - fflag_feat_front_prod_309_choice_hint_080523_short (#6576)",
-  "commit": "5a90f673dd159b43881a2130c2593190eb2be82a",
-  "date": "2024-10-30T14:10:03.000Z",
+  "message": "fix: LEAP-1647: Fix comments when user uses OCR textarea (#6622)",
+  "commit": "2d82390dc4328c83f8c03ea3be0bf8f6730c0bf5",
+  "date": "2024-11-13T16:11:45.000Z",
   "branch": "develop"
 }

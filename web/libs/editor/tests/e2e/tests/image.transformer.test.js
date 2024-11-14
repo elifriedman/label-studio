@@ -83,6 +83,7 @@ const shapes = {
       return {
         params: [[...points, points[0]]],
         result: {
+          closed: true,
           points,
         },
       };
