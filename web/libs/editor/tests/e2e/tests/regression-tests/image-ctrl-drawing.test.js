@@ -63,6 +63,7 @@ const createShape = {
         action: "drawByClickingPoints",
         params: [[...points, points[0]]],
         result: {
+          closed: true,
           points,
         },
       };
