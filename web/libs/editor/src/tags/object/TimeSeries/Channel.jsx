@@ -117,6 +117,10 @@ class ChannelD3 extends React.Component {
   trackerTime;
   trackerValue;
 
+  horizontalTracker;
+  trackerY = 0;
+  trackerHorizontalText;
+
   extent = [0, 0];
 
   // if there is a huge data — use sliced data to optimize render
@@ -382,7 +386,9 @@ class ChannelD3 extends React.Component {
     const [dataX, dataY] = this.stick(screenX);
 
     this.trackerX = dataX;
+    this.trackerY = dataY;
     this.tracker.attr("transform", `translate(${this.x(dataX) + 0.5},0)`);
+    this.horizontalTracker.attr("transform", `translate(0,${this.y(dataY)})`);
     this.trackerTime.text(
       `${this.formatTime(dataX)}${brushWidth === 0 ? "" : ` [${this.formatDuration(brushWidth)}]`}`,
     );
@@ -395,6 +401,8 @@ class ChannelD3 extends React.Component {
     const updateTracker = this.updateTracker;
 
     this.tracker = this.main.append("g").style("pointer-events", "none");
+    this.horizontalTracker = this.main.append("g").style("pointer-events", "none");
+    this.horizontalTracker.append("line").attr("x1", this.state.width).attr("x2", 0).attr("stroke", "#666");
     this.trackerValue = this.tracker.append("text").attr("font-size", 10).attr("fill", "#666");
     this.trackerTime = this.tracker
       .append("text")
